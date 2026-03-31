@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="h-screen flex flex-col bg-background overflow-hidden">
-      <Header setOpenForm={setOpenForm} />
+      <Header setOpenForm={setOpenForm} setEditingTodo={setEditingTodo />
       <Tab activeTab={activeTab} setActiveTab={setActiveTab} tabConfig={tabConfig} />
 
       <div className="flex-1 overflow-hidden px-4 sm:px-6 pb-4">
