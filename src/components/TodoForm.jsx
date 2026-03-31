@@ -1,16 +1,6 @@
 import { useState, useEffect } from "react";
-// import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-// import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
-// import { Textarea } from "@/components/ui/textarea";
-// import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-// import { Label } from "@/components/ui/label";
-// import { format } from "date-fns";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Calendar, Flag } from "lucide-react";
-
-
-
+import { X} from "lucide-react";
 
 const TodoForm = ({ openForm, setOpenForm, handleSubmit, editingTodo, getTodayStr }) => {
     const [title, setTitle] = useState("");
@@ -64,7 +54,7 @@ const TodoForm = ({ openForm, setOpenForm, handleSubmit, editingTodo, getTodaySt
                         c className="fixed left-[50%] top-[50%] z-50 grid w-full max-w-md gap-4 border bg-background p-6 shadow-lg sm:rounded-lg"
                     >
                         <div className="flex flex-col space-y-1.5 text-center sm:text-left">
-                            <h2 className="text-lg font-semibold leading-none tracking-tight">Add Task</h2>
+                            <h2 className="text-lg font-semibold leading-none tracking-tight">{editingTodo ? "Edit Todo" : "Add New Todo"}</h2>
                         </div>
                         <button
                             onClick={() => setOpenForm(false)}
