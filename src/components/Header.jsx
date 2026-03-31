@@ -9,7 +9,7 @@ export const Header = ({setOpenForm ,setEditingTodo}) => {
               <Sparkles size={22} className="text-white" />
             </div>
             <div>
-              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">Tickr</h1>
+              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">My Task</h1>
               <p className="text-xs text-white/70">{`${(new Date()).toLocaleDateString()}`}</p>
             </div>
           </div>
