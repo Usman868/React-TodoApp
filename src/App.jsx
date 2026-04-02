@@ -47,9 +47,9 @@ function App() {
   const today = getTodayStr();
   const activeTodos = todos.filter((t) => !t.completed)
   const completedTodos = todos.filter((t) => t.completed);
-  const todayTodos = activeTodos.filter((t) => { if (activeTab == "today") return t.dueDate === today });
-  const pending = activeTodos.filter((t) => { if (activeTab == "pending") return t.dueDate > today });
-  const overdue = activeTodos.filter((t) => { if (activeTab == "overdue") return t.dueDate < today });
+  const todayTodos = activeTodos.filter((t) => t.dueDate === today );
+  const pending = activeTodos.filter((t) => t.dueDate > today );
+  const overdue = activeTodos.filter((t) => t.dueDate < today );
 
   const tabConfig = {
     today: { todos: todayTodos, icon: CalendarCheck, label: "Today", accent: "text-primary", bgActive: "bg-primary text-primary-foreground shadow-lg shadow-primary/25", bgInactive: "bg-card text-muted-foreground hover:text-foreground hover:shadow-md" },
