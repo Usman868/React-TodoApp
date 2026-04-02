@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Clock, AlertTriangle, CalendarCheck, CheckCircle2, Sparkles } from "lucide-react";
+import { Clock, AlertTriangle, CalendarCheck } from "lucide-react";
 import { Header } from "./components/Header"
 import { Tab } from "./components/Tabs";
-import TodoList from "./components/TodoList"
 import TodoForm from "./components/TodoForm"
+import EmptyState from "./components/EmptyState"
+import TodoPanel, { CompletedPanel } from "./components/TodoPanel"
 
 
 const getTodayStr = () => new Date().toISOString().split("T")[0];
